@@ -1,5 +1,2 @@
-- [Configuration](configuration.md)
-- [Themes](themes.md)
-- [Using plugins](plugins.md)
-- [Markdown configuration](markdown.md)
-- [Language highlight](language-highlight.md)
+- [Müyəssərlik haqqında](muyesserlik-nedir/muyesserlik-haqqinda.md)
+- [Hansı növ əlilliklər nəzərə alınır?](muyesserlik-nedir/elilliyin-novleri.md)

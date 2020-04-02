@@ -1,25 +1,40 @@
-- Accessibility nədir?
+- Müyəssərlik nədir?
 
-  - [Accessibility haqqında](accessibility-nedir/accessibility-haqqinda.md)
-  - [Hansı növ əlilliklər nəzərə alınır?](accessibility-nedir/elilliyin-novleri.md)
-  - [Accessibility-nin tətbiqi](accessibility-nedir/tetbiqi.md)
-  - [Accessibility qaydaları və qanunvericilik](accessibility-nedir/qaydalar-ve-qanunvericilik.md)
-  - [Accessibility API-ləri](accessibility-nedir/apiler.md)
+  - [Müyəssərlik haqqında](muyesserlik-nedir/muyesserlik-haqqinda.md)
+  - [Hansı növ əlilliklər nəzərə alınır?](muyesserlik-nedir/elilliyin-novleri.md)
+  - [Müyəssərliyin tətbiqi](muyesserlik-nedir/tetbiqi.md)
+  - [Müyəssərliyin qaydaları və qanunvericilik](muyesserlik-nedir/qaydalar-ve-qanunvericilik.md)
+  - [Müyəssərlik API-ləri](muyesserlik-nedir/apiler.md)
 
-- HTML: Accessibility üçün əsas
+- HTML: Müyəssərlik üçün əsas
 
-  - [HTML və Accessibility](configuration.md)
-  - [Yaxşı Semantika](themes.md)
-  - [Accessible Məlumat Cədvəlləri](language-highlight.md)
-  - [Mətn Alternativləri](plugins.md)
-  - [Keçidlər Haqqında](markdown.md)
+  - [HTML və Müyəssərlik](html-ve-muyesserlik/html-ve-muyesserlik.md)
+  - [Yaxşı Semantika](html-ve-muyesserlik/yaxshi-semantika.md)
+  - [Müyəssər Məlumat Cədvəlləri](html-ve-muyesserlik/melumat-cedvelleri.md)
+  - [Mətn Alternativləri](html-ve-muyesserlik/metn-alternativleri.md)
+  - [Keçidlər Haqqında](html-ve-muyesserlik/kecidler-haqqinda.md)
 
 - CSS və JavaScript ən yaxşı praktikalar
 
-  - [CSS](css.md)
-  - [JavaScript](javascript.md)
+  - [CSS](css-ve-js-praktikada/css.md)
+  - [JavaScript](css-vs-js-praktikada/javascript.md)
 
 - WAI-ARIA əsasları
 
-  - [WAI-ARIA Nədir?](wai-aria-nedir.md)
-  - [WAI-ARIA praktiki nümunələr](wai-aria-numuneler.md)
+  - [WAI-ARIA Nədir?](wai-aria-esaslari/wai-aria-nedir.md)
+  - [WAI-ARIA praktiki nümunələr](wai-aria-esaslari/wai-aria-numuneler.md)
+
+- Müyəssər Multimediya
+
+  - [Multimediya və Müyəssərlik](muyesser-multimediya/multimediya-ve-muyesserlik.md)
+  - [Müyəssər Audio və Video](muyesser-multimediya/muyesser-audio-ve-video.md)
+  - [Audio Transkriptləri](muyesser-multimediya/audio-transkriptleri.md)
+  - [Video Mətn İzləri](muyesser-multimediya/video-metn-izleri.md)
+
+- Mobil Müyəssərlik
+
+  - [Mobil Qurğularda Müyəssərlik](mobil-muyesserlik/mobil-qurgularda-muyesserlik.md)
+  - [Android və iOS-da screen oxuyucuları](mobil-muyesserlik/screen-oxuyuculari-android-ios.md)
+  - [İdarə Mexanizmləri](mobil-muyesserlik/idare-mexanizmleri.md)
+  - [Responsiv Dizayn](mobil-muyesserlik/responsiv-dizayn.md)
+  - [User inputlar](mobil-muyesserlik/user-inputlar.md)
