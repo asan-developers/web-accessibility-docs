@@ -8,7 +8,7 @@ Bəzi hallarda bunu edə bilməməyiniz müzakirə mövzusu ola bilər - saytın
 
 Məqsədimiz "hər şey və ya heç nə" deyil, ancaq - etdiyiniz hər kiçik dəyişiklik saytın müyəssərliyini artırmağa kömək edə bilər.
 
-### Mətn məzmunu
+## Mətn məzmunu
 
 Ekran oxuyucularına edə biləcəyimiz ən yaxşı şey, yaxşı strukturlaşdırılmış, başlıqlı, paraqraflı, siyahılı və s. məzmun təqdim etməkdir. Yaxşı semantik nümunə aşağıdakı kimi ola bilər:
 
@@ -38,3 +38,38 @@ Ekran oxuyucularına edə biləcəyimiz ən yaxşı şey, yaxşı strukturlaşd�
   Bu isə, ikinci alt hissədir. Düşünürəm ki, bu əvvəlkindən maraqlı alınıb.
 </p>
 ```
+
+Bu məqaləni hər hansı bir ekran oxuyucusu ilə yoxlaya bilərsiniz. Mətnin üzərindən naviqasiya etsəniz, bunun çox rahat olduğunu görəcəksiniz.
+
+- Ekran oxuyucusu mətni oxuduqca hər bir başlığı xüsusilə qeyd edəcək və istifadəçiyə nəyin başlıq, nəyin paraqraf olduğunu aydın edəcək.
+- Hər bir elementdən sonra dayanacaq və istifadəçiyə oxuma tempini seçmək imkanı yaradacaq.
+- Əksər ekran oxuyucularında mövcud olan əvvəlki/sonrakı başlıqlara getmək ikmanından yararlanmağa kömək edəcək.
+- Bəzi ekran oxuyucularında isə başlıqları, mündəricat kimi təqdim etmək imkanı yaracaq.
+
+Bəzən insanlar, başlıqları və paraqrafları yazarkən, sadəcə görünüşə diqqət yetirib semantik olmayan HTML elementlərindən istifadə edirlər:
+
+```html
+<font size="7">Mənim başlığım</font> <br /><br />
+Bu sənədin birinci hissəsidir.
+<br /><br />
+Bu isə daha bir paraqrafdır.
+<br /><br />
+1. Bu isə
+<br /><br />
+2. sizin oxumağınız üçün
+<br /><br />
+3. bir siyahıdır
+<br /><br />
+<font size="5">İkinci dərəcəli başlıq</font>
+<br /><br />
+Bu mənim məqaləmin ilk alt hissəsidir. Mən bu məqaləni hər kəsin tapmağını çox
+istərdim.
+<br /><br />
+<font size="5">Daha bir ikinci dərəcəli başlıq</font>
+<br /><br />
+Bu isə, ikinci alt hissədir. Düşünürəm ki, bu əvvəlkindən maraqlı alınıb.
+```
+
+Görüdüyünüz bu nümunə isə, çoxumuza tanış olan, semantik olmayan HTML-in bariz nümunəsidir. Təəssüflər olsun ki, bu cür markap ekran oxuycularını heç də sevindirmir - bu markapdan ekran oxuyucuları vasitəsilə mündəricat əldə edə bilməzsiniz, ekran oxuyucuları mətnin hansı hissəsində dayanmalı olduqlarını, hansı hissənin paraqraf, hansının başlıq olduğunu bilməyəcəklər. Bu səbəbdən də hamsını bir ağızdan oxuyub keçəcəklər.
+
+Müyəssərlikdən əlavə, bu cür markap digər çətinliklər də yaradır - yazılmış HTML-i CSS vasitəsilə görünüş vermək olduqca çətin olacaq, fikir versəniz, düzgün əməlli CSS selektorlarından istifadə etmək də olmur. Həmçinin bu vəziyyət, JavaScript vasitəsilə markapda dəyişiklik etməyi də çətinləşdirir.
