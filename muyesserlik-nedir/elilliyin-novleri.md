@@ -48,3 +48,5 @@ Aşağıdakı punktlar, əqli pozğunluğu olan insanlar üçün müyəssərliy�
 - prosesləri məntiqi mərhələlərə bölmək və progress indicatorlar vasitəsilə irəlləyişi göstərmək
 - istifadəçinin təhlükəsizliyini tam təmin etməklə, sadə autentifikasiya prosesləri hazırlamaq
 - xəta mesajlarından və köməkçi məlumatlardan istifadə etməklə formları asan doldumaq imkanı yaratmaq
+
+Davamı: [Müyəssərliyin tətbiqi](muyesserlik-nedir/tetbiqi.md)
