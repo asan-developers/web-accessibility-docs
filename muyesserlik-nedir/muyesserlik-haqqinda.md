@@ -13,3 +13,5 @@ Accessible saytlar hazırlamaq hamı üçün xeyirlidir:
 - Saytların müyəssərliyi haqqında düşünmək sizin etikanızın və mənəviyyatınızın göstəricisidir. Bu sizin ictimai imicinizi yaxşılaşdıra bilər.
 - Müyəssərliyi artıran digər praktikalar, sizin saytınızı mobil istifadəçilər və zəif internet bağlantısı ilə qoşulanlar üçün daha rahat edə bilər.
 - Müyəssərliyin qanunvericiliyin bir parçası olduğunu daha öncə qeyd edtmişdik.
+
+Daha sonra: [Hansı növ əlilliklər nəzərə alınır?](muyesserlik-nedir/elilliyin-novleri.md)
