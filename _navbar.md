@@ -1,2 +1,0 @@
-- [Müyəssərlik haqqında](muyesserlik-nedir/muyesserlik-haqqinda.md)
-- [Hansı növ əlilliklər nəzərə alınır?](muyesserlik-nedir/elilliyin-novleri.md)
