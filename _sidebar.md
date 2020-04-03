@@ -4,7 +4,7 @@
   - [Hansı növ əlilliklər nəzərə alınır?](muyesserlik-nedir/elilliyin-novleri.md)
   - [Müyəssərliyin tətbiqi](muyesserlik-nedir/tetbiqi.md)
   - [Müyəssərliyin qaydaları və qanunvericilik](muyesserlik-nedir/qaydalar-ve-qanunvericilik.md)
-  - [Müyəssərlik API-ləri](muyesserlik-nedir/apiler.md)
+  - [Müyəssərlik API-ləri](muyesserlik-nedir/apilar.md)
 
 - HTML: Müyəssərlik üçün əsas
 
