@@ -32,3 +32,5 @@ Yekun olaraq:
 - Layihənizin əvvəlindən müyəssərlik mövzusunu nəzərə alın və saytınızı tez-tez test edin. Bütün digər bug-lar kimi, accessibility ilə bağlı problemlər də sonradan aşkarlandığında çətinliklər yarada bilər.
 - Yadınızda saxlayın ki, accessibility üçün nəzərdə tutulmuş ən yaxşı praktikalar hər kəs üçün xeyirlidir, sadəcə əlilliyi olan insanlar üçün deyil. Misalçün, semantik HTML sadəcə ekran oxuyucuları üçün deyil həm də saytınızın tez yüklənməsinə və performansına müsbət təsir göstərir. Bu, hər kəsə, ələlxüsus da zəif internet bağlantısı olanlara və mobil qurğulardan saytınıza daxil olanlara xeyirli olacaqdır.
 - Saytınızda müyəssərliklə bağlı bəyanat paylaşın və problem yaşayan insanlarla ünsiyyət qurun.
+
+Daha sonra: [Müyəssərliyin qaydaları və qanunvericilik](muyesserlik-nedir/qaydalar-ve-qanunvericilik.md)

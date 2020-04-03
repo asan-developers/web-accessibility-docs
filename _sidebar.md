@@ -17,7 +17,7 @@
 - CSS və JavaScript ən yaxşı praktikalar
 
   - [CSS](css-ve-js-praktikada/css.md)
-  - [JavaScript](css-vs-js-praktikada/javascript.md)
+  - [JavaScript](css-ve-js-praktikada/js.md)
 
 - WAI-ARIA əsasları
 
