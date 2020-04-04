@@ -33,3 +33,5 @@ Lakin bu kodun problemləri var - ekran oxuyucusu istifadəçisinin sətirləri 
 
 - Cədvəlin başlığı `<th>` elementi ilə işarə edilmişdir - siz həmçinin `scope` atributu vasitəsilə bu başlıqların sətirlərə yoxsa sütunlara aid olduğunu təyin edə bilərsiniz. Bu sizə ekran oxuyucularına tamamilə qruplaşdırılmış və anlaşıqlı məlumat təqdim edir.
 - `<caption>` elementi və `<table>` elementinin `summary` atributu eyni işi görür - onlar cədvəlin alternativ mətni kimi qulluq göstərir və ekran oxuyucularına cədvəl haqqında ümumi məlumat verirlər. `<caption>` elementi bunlar arasında daha çox üstünlük verilənidir çünki bu həm də vizual pozğunluğu olmayan insanlar üçün də yararlıdır. İkisini birdən istifadə etməyinizə isə heç bir gərək yoxdur.
+
+Daha sonra: [Mətn Alternativləri](html-ve-muyesserlik/metn-alternativleri.md)
