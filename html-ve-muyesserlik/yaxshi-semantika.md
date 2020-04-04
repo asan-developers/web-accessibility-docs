@@ -236,3 +236,88 @@ Siz Enter/Return düyməsini basmaqla üzərində olduğunuz elementi aktivləş
   </div>
 </form>
 ```
+
+Lakin həmişə olduğu kimi insanlar HTML ilə qəribə şeylər etməyə davam edirlər. Misalçün, bəzən düymələrin `<div>` elementi ilə yazıldığının şahidi ola bilərik:
+
+```html
+<div data-message="Bu birinci buttondandır">Məni kliklə!</div>
+<div data-message="Bu ikinci buttondandır">Məni də kliklə!</div>
+<div data-message="Bu isə üçüncü buttondandır">Və məni də!</div>
+```
+
+Belə kod yazmaq heç tövsiyyə olunmur - bunu yazmaqla hazır keyboard accessibility funksionallığını və defolt olaraq buttonlara verilmiş dizaynı itirmiş olursunuz.
+
+## Klaviatura müyəssərliyini geri qazanmaq
+
+Bu cür yazılmış kodda keyboard accessibility funksionallığını geri qazanmaq bir az artıq iş tələb edir. Aşağıdakı nümunədə saxta `<div>` düymələrimizə `tabindex="0"` atributunu əlavə edərək fokus olunmaq funksionallığını gətirmişik:
+
+```html
+<div data-message="Bu birinci buttondandır" tabindex="0">Məni kliklə!</div>
+<div data-message="Bu ikinci buttondandır" tabindex="0">Məni də kliklə!</div>
+<div data-message="Bu isə üçüncü buttondandır" tabindex="0">Və məni də!</div>
+```
+
+Bunun nümunəsini [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) faylında görə bilərsiniz.
+
+Qısası, `tabindex` atributu klaviatura ilə idarə oluna bilən elementlərin sırasını müəyyən edir. Bunu etmək bəzi qarışıqlıqlar yarada biləcəyi üçün yaxşı fikir sayılmır. Həqiqətən ehtiyacınız olmadığı təqdirdə bunu etməməyinizi tövsiyyə edirik. `tabindex`-in iki əsas istifadə üsulu var:
+
+- `tabindex="0"` yuxarıda qeyd etdiyimiz kimi, klaviatura ilə idarə oluna bilməyən - interaktiv olmayan elementlərin interaktiv olunmasını təmin edir. Bu `tabindex`-in ən çox istifadə olunan dəyərlədindəndir.
+- `tabindex="-1"` dəyəri interaktiv olmayan elementlərin kod vasitəsilə (misalçün JavaScript ilə) fokus oluna bilməsini təmin edir.
+
+Yuxarıdakı əlavələrin bizə düymələrin arasında naviqasiya imkanı yaratmasına baxmayaraq, biz həmin elemntləri Enter/Return düymələri ilə aktiv edə bilmərik. Bunun üçün JavaScript ilə kiçik bir iş görmək lazım olacaq:
+
+```javascript
+document.onkeydown = function (e) {
+  // The Enter/Return key
+  if (e.keyCode === 13) {
+    document.activeElement.click();
+  }
+};
+```
+
+Burada biz, `document` obyektinə listener əlavə etməklə, klaviatura vasitəsilə fokuslanmış elementi aşkar edirik. Daha sonra isə Enter/Return düyməsinin basılıb basılmadığını `keyCode` vasitəsilə təyin edib, səhifədəki `activeElement`-i JavaScript ilə klikləyirik.
+
+Gördüyünüz kimi, əvvəlcədən bizə hazır verilmiş funksionallığı geri qazanmaq üçün əlavə çox iş görmək lazım olur. **Yaxşısı budur ki, düzgün işlər üçün düzgün HTML elementlərindən istifadə edək.**
+
+## Mənalı mətn etiketləri
+
+UI kontrol etiketləri (UI control labels) bütün istifadəçilər üçün yararlıdır, lakin onları düzgün istifadə etmək əlilliyi olan isitfadəçilər üçün daha yararlı ola bilər.
+
+Button və linklərdə mümkün olduğu qədər anlaşıla bilən mətn etiketlərindən istifadə edin. "Click here" və s. bunun kimi ayrılıqda heç bir məna ifadə etməyən adlardan istifadə etməyin. Bəzi ekran oxuycusu istifadəçiləri bu cür linklərin və buttonların siyahısını əldə etmək istəyirlər və düymələrin üzərinə yazdığınızı etiketlər onlar üçün anlaşıqlı olmaya bilər.
+
+Yazdığınız etiketlərin kontekst daxilində və kontekstdən kənarda məna ifadə etdiyindən əmin olun. Aşağıdakı kod parçası yaxşı adlandırılmış linkin bir nümunəsidir:
+
+```html
+<p>
+  Balinalar həqiqətən möhtəşəm varlıqlardır.
+  <a href="whales.html">Balinalar haqqında daha çox öyrən</a>.
+</p>
+```
+
+Aşağıdakı isə, pis adlandırılmış linkin bir nümunəsidir:
+
+```html
+<p>
+  Balinalar həqiqətən möhtəşəm varlıqlardır. Onlar haqqında daha çox öyrənmək
+  üçün, <a href="whales.html">buraya klikləyin</a>.
+</p>
+```
+
+Form etiketləri də həmçinin diqqət etməli olduğumuz nöqtədir. Bu etiketlər hansı form elementinin hansı məqsədə qulluq etdiyinin qısa izahıdır. Gəlin aşağıdakı nümunıəyə baxaq:
+
+```html
+Adınızı daxil edin: <input type="text" id="name" name="name" />
+```
+
+Bu nümunə əlil insanlar üçün heç də yararlı deyil. Burada yazılmış etiketin göstərilən input ilə necə əlaqəli olduğunu bildirən heç bir bağlantı yoxdur və əgər formu görümürsünüzsə onu doldurmağınız da sizin üçün çətin ola bilər.
+
+Aşağıdak nümunə isə bunu etməyin düzgün variantıdır:
+
+```html
+<div>
+  <label for="name">Adınızı daxil edin:</label>
+  <input type="text" id="name" name="name" />
+</div>
+```
+
+Bu cür yazılmış kod ilə göstərilən input və etiket arasında bağlılıq mövcuddur və ekran oxuyucularından istifadə etdən istifadəçiləriniz inputu nə üçün doldurmalı olduqlarını daha yaxşı anlamış olacaqlar. Əksər brauzerlərdə isə, etiket və inputu əlaqələndirmək vasitəsilə siz etiketə kliklədiyinizdə əlaqəli form elementinə fokuslanmış olursunuz. Bu, sözügedən form elementinə klik üçün daha böyük sahə verir və onu seçməyi rahatlaşdırır.
