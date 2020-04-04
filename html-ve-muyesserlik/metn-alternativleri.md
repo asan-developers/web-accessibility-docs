@@ -1,1 +1,1 @@
-# metn alternativleri
+# Mətn alternativləri

@@ -321,3 +321,5 @@ Aşağıdak nümunə isə bunu etməyin düzgün variantıdır:
 ```
 
 Bu cür yazılmış kod ilə göstərilən input və etiket arasında bağlılıq mövcuddur və ekran oxuyucularından istifadə etdən istifadəçiləriniz inputu nə üçün doldurmalı olduqlarını daha yaxşı anlamış olacaqlar. Əksər brauzerlərdə isə, etiket və inputu əlaqələndirmək vasitəsilə siz etiketə kliklədiyinizdə əlaqəli form elementinə fokuslanmış olursunuz. Bu, sözügedən form elementinə klik üçün daha böyük sahə verir və onu seçməyi rahatlaşdırır.
+
+Daha sonra: [Müyəssər Məlumat Cədvəlləri](html-ve-muyesserlik/melumat-cedvelleri.md)
