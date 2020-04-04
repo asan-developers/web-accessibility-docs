@@ -73,3 +73,166 @@ Bu isə, ikinci alt hissədir. Düşünürəm ki, bu əvvəlkindən maraqlı al�
 Görüdüyünüz bu nümunə isə, çoxumuza tanış olan, semantik olmayan HTML-in bariz nümunəsidir. Təəssüflər olsun ki, bu cür markap ekran oxuycularını heç də sevindirmir - bu markapdan ekran oxuyucuları vasitəsilə mündəricat əldə edə bilməzsiniz, ekran oxuyucuları mətnin hansı hissəsində dayanmalı olduqlarını, hansı hissənin paraqraf, hansının başlıq olduğunu bilməyəcəklər. Bu səbəbdən də hamsını bir ağızdan oxuyub keçəcəklər.
 
 Müyəssərlikdən əlavə, bu cür markap digər çətinliklər də yaradır - yazılmış HTML-i CSS vasitəsilə görünüş vermək olduqca çətin olacaq, fikir versəniz, düzgün əməlli CSS selektorlarından istifadə etmək də olmur. Həmçinin bu vəziyyət, JavaScript vasitəsilə markapda dəyişiklik etməyi də çətinləşdirir.
+
+## Aydın dil işlətmək
+
+Mətndə işlətdiyiniz dil də müyəssərlikdə böyük rol oynayır. Mətnlərinizdə mürəkkəb olmayan aydın dildən istifadə etməli və gərəkzi jarqon və şivələrdən mümkün qədər az istifadə etməlisiniz. Bu sadəcə əqli pozğunluqları olan insanlara deyil hamıya müsbət təsir göstərəcək. Bundan əlavə, ekran oxuyucularının oxumaqdan çətinlik çəkdiyi simbollardan istifadə etməyi də mümkün qədər azaldın:
+
+- Əgər alternativiniz varsa tire işarəsindən istifadə etməyin. Misalçün, 5-7 yazmaq əvəzinə, 5-dən 7-yədək yaza bilərsiniz.
+- Qısaltmaları açıq şəkildə yazın. Misalçün, 10 Yan yazmaq əvəzinə 10 Yanvar yazın.
+- Akronimləri ən azından bir neçə dəfə açıq şəkildə yazın. HTML yazmaq əvəzinə Hyper Text Markup Language yaza bilərsiniz.
+
+## Səhifə sxemi (layout)
+
+Əvvəllər bir çox insan səhifənin layoutunu hazırlamaq üçün HTML cədvəllərindən istifadə edirdilər - cədvəlin başlığını, sütunları və xanaları istifadə etməklə səhifənin müstəlif yerlərini təsvir edirdilər. Bu heç də yaxşı fikir deyil çünki səhifənin layoutu daha da mürəkkəbləşdikdə ekran oxuyucuları mənalı bir şey oxumaqda çətinlik çəkəcəklər.
+
+HTML cədvəli ilə hazırlanmış bir səhifə layoutunu (table layout) sizə nümunə kimi göstərək:
+
+```html
+<table width="1200">
+  <!-- əsas başlıq sətiri -->
+  <tr id="heading">
+    <td colspan="6">
+      <h1 align="center">Başlıq</h1>
+    </td>
+  </tr>
+  <!-- nav menu sətiri  -->
+  <tr id="nav" bgcolor="#ffffff">
+    <td width="200">
+      <a href="#" align="center">Əsas səhifə</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Komandamız</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Layihələr</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Əlaqə</a>
+    </td>
+    <td width="300">
+      <form width="300">
+        <input type="search" name="q" placeholder="Axtarış sözü" width="300" />
+      </form>
+    </td>
+    <td width="100">
+      <button width="100">Getdik!</button>
+    </td>
+  </tr>
+  <!-- aralıq sətri -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- əsas məzmun və yan sətir -->
+  <tr id="main">
+    <td id="content" colspan="4" bgcolor="#ffffff">
+      <!-- əsas məzmun burada olacaq -->
+    </td>
+    <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
+      <h2>Əlaqəli</h2>
+      <!-- yan məzmun burada olacaq -->
+    </td>
+  </tr>
+  <!-- ararlıq sətir -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- footer sətiri -->
+  <tr id="footer" bgcolor="#ffffff">
+    <td colspan="6">
+      <p>©Copyright 2050. Bütün hüquqları qorunur</p>
+    </td>
+  </tr>
+</table>
+```
+
+Bu cür layoutu anlamağa çalışarkən ekran oxuyucusu sizə mövcud bir cədvəlin olduğunu bildirəcək. Daha sonra isə həmin cədvələ obyekt kimi baxacaq və içərisindəki hər bir xanaya və sütunlara ayrı ayrı nəzər yetirəcəksiniz.
+
+Cədvəl layoutları keçmişin qalıqlarıdır - onları CSS dəstəyinin brauzerlərdə yaxşı olmadığı vaxtlarda istifadə etmək normal qəbul olunurdu, indi isə onlar sadəcə ekran oxuyucularının başını qarışdırmaqla məşğuldur. Əlavə olaraq bu cür layoutların markapı (HTML kodu) daha uzun olur və idarə edilməsi zamanla çətinləşir. Müasir bir səhifə layoutunun nümunəsi isə aşağıdakı kimi olmalıdır:
+
+```html
+<header>
+  <h1>Başlıq</h1>
+</header>
+
+<nav>
+  <!-- əsas naviqasiya burada olacaq -->
+</nav>
+
+<!-- Səhifəmizin əsas məzmunu burada olacaq -->
+<main>
+  <!-- Burada bir məqalə var -->
+  <article>
+    <h2>Məqalənin başlığı</h2>
+
+    <!-- Məqalənin məzmunu burada olacaq -->
+  </article>
+
+  <aside>
+    <h2>Əlaqəli məzmun</h2>
+
+    <!-- Yan məzmun burada olacaq -->
+  </aside>
+</main>
+
+<!-- Bu isə bizim footerimizdir -->
+
+<footer>
+  <!-- footer məzmunu burada olacaq -->
+</footer>
+```
+
+Bu şəkildə yazılmış markap ekran oxuyucuları üçün problem yaratmayacaq və kod baxımından da daha az və səliqəli koddan ibarətdir. Bu da o deməkdir ki, bu cür markap idarə edilməsi daha rahat oalcaq və istifadəçilərin qurğusuna yüklənmək üçün daha az vaxt alacaq.
+
+Bu cür layoutu yaratmağın başqa bir yolu isə çoxlus sayda iç-içə `<div>` elementlərindən istifadə etməkdir. Lakin layout hazırlayarkən uyğun elementlərdən - naviqasiya üçün `<nav>` elementindən, məqalələr üçün `<article>` elementindən, footer üçün `<footer>` elementindən və s. - istifadə etməyiniz tövsiyyə olunur. Bunu etməyiniz, ekran oxuyucuları üçün əlavə semantik məlumat vermiş olacaq və istifadəçilər saytınızı daha rahat istifadə edə biləcəklər.
+
+## UI Kontrolları
+
+UI kontrolları dedikdə istifadəçinin web səhifə ilə qarşılıqlı əlaqədə olmasını təmin edən elemenlər - buttonlar, linklər, form elementləri və s. - nəzərdə tutulur.
+
+UI kontrollarının əsas xüsusiyyətlərindən biri odur ki, brauzerlər defolt olaraq onların klaviatura ilə idarə edilməsi imkanı yaradır. Buna şahid olmaq üçün bu fayla nəzər yetirməyiniz xahiş olunur: [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) - səhifə açıldığında `Tab` düyməsi ilə müxtəlif keçidlərin, buttonların və inputların üzərindən klaviatura ilə hərəkət edə və aktiv edə bilərsiniz. Üzərində olduğunuz elementə baxsanız görəcəksiniz ki, brauzer defolt olaraq verilmiş stillərlə sizə fokuslandığınız nöqtəni işarə edir. Fokuslanmış elementlər defolt olaraq vurğulanmışdır:
+
+![tab focus demonstation](https://media.prod.mdn.mozit.cloud/attachments/2016/10/18/14215/943a9845e5abd91bda6236067ea19f1e/button-focused-unfocused.png)
+
+Siz Enter/Return düyməsini basmaqla üzərində olduğunuz elementi aktivləşdirə və ya üzərində olduğunuz text inputun içərisinə yazı yaza bilərsiniz. Bu funksionallığı əldə etmək üçün isə sadəcə düzgün HTML elementlərindən istifadə etməyiniz kifayətdir:
+
+```html
+<h1>Keçidlər</h1>
+
+<p>Bu keçid <a href="https://www.mozilla.org">Mozilla</a>yadır.</p>
+
+<p>
+  <a href="https://developer.mozilla.org">Mozilla Developer Network</a>ə daha
+  bir keçid.
+</p>
+
+<h2>Düymələr</h2>
+
+<p>
+  <button data-message="Bu birinci buttondandır">Məni kliklə!</button>
+  <button data-message="Bu ikinci buttondandır">Məni də kliklə!</button>
+  <button data-message="Bu isə üçüncü buttondandır">Və məni də!</button>
+</p>
+
+<h2>Form</h2>
+
+<form>
+  <div>
+    <label for="name">Adınızı daxil edin:</label>
+    <input type="text" id="name" name="name" />
+  </div>
+  <div>
+    <label for="age">Yaşınızı daxil edin:</label>
+    <input type="text" id="age" name="age" />
+  </div>
+  <div>
+    <label for="mood">Kefinizi seçin:</label>
+    <select id="mood" name="mood">
+      <option>Xoşbəxt</option>
+      <option>Kefsiz</option>
+      <option>Əsəbi</option>
+      <option>Narahat</option>
+    </select>
+  </div>
+</form>
+```
