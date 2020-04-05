@@ -36,7 +36,7 @@ Diqqət yetirsəniz, bu keçidlərin təsvirində Power Point faylını və yeni
 
 Skip link və ya skipnav `<body>` elementinin başlanğıcına mümkün qədər yaxın yerləşdirilmiş və səhifənin əsas məzmununa keçidi göstərən `a` elementidir. Bu linklər insanlara bütün səhifələrdə təkrarlanan kontentin (misalçün, header və əsas naviqasiya) üzərindən keçmək imkanı yaradır.
 
-Skip linklər saytınızda assistiv texnologiyaların köməyilə gəzişən istifadəçilər üçün xüsusilə yararlıdır çünki bu cür istiafəçilər təkrarlanan keçidlərin üzərindən dəfələrlə keçmək bezdirici ola bilər. Skip linklərə aid aşağıdakı resurslardan daha ətraflı məlumat ala bilərsiniz:
+Skip linklər saytınızda assistiv texnologiyaların köməyilə gəzişən istifadəçilər üçün xüsusilə yararlıdır çünki bu cür istiafəçilər üçün təkrarlanan keçidlərin üzərindən dəfələrlə keçmək bezdirici ola bilər. Skip linklərə aid aşağıdakı resurslardan daha ətraflı məlumat ala bilərsiniz:
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 - [How–to: Use Skip Navigation links - The A11Y Project](https://a11yproject.com/posts/skip-nav-links/)
