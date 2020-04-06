@@ -176,3 +176,5 @@ Digər tərəfdən, `visibility: hidden` və `display: none` kimi CSS deklarasiy
 ### İstifadəçilərin sizi stilləri dəyişəcəyini qəbul edin
 
 İstifadəçilərin sizin saytınızdakı stilləri dəyişdirəcəyi halını da nəzərdə tutun. İstifadəçilər bunu müxtəlif səbəblərdən edə bilərlər. Gözü yaxşı görməyən istifadəçi bütün saytdakı font ölçüsünü böyüdə, rəng koruluğu olan isitfadəçi isə saytdakı rəngləri dəyişərək kontrastı özləri istəyən kimi düz-qoş edə bilər. Səbəbi nə olur olsun, bu cür dəyişiklərə hazır olmalı və saytınızın dizaynını elə qurmalısınız ki, bu cür dəyişikliklər rahat edilə bilsin. Misalçün, saytınızın əsas hissəsinin böyük ölçülü text ilə rahat yola getməsini təmin edin - font ölçüsü böydüyündə saytınız mətni gizlədə və ya tamamilə pis vəziyyətə sala bilər.
+
+Daha sonra: [JavaScript](css-ve-js-praktikada/js.md)
