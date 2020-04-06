@@ -137,4 +137,42 @@ Form elementləri istifadəçilərin sizin səhifənizə məlumat daxil etməsin
 </div>
 ```
 
-Form elementlərinin CSS vasitəsilə stilləşdirilməsinin yaxşı nümunəsi ilə [form-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html) faylında tanış ola bilərsiniz (Həmçinin [canlı nümunəyə baxın](https://mdn.github.io/learning-area/accessibility/css/form-css.html)).
+Form elementlərinin CSS vasitəsilə stilləşdirilməsinin yaxşı nümunəsi ilə [form-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html) faylında tanış ola bilərsiniz (həmçinin [canlı nümunəyə baxın](https://mdn.github.io/learning-area/accessibility/css/form-css.html)).
+
+Form elementlərinə stil verərkən, işinizin əksər hissəsi ölçüləri dəyişmək, label və inputları bir sıraya düzmək və onların səliqəli göründüyündən əmin olmaq olacaq.
+
+Lakin bu stilləri verərkən istifadəçi form elementlərinə fokuslandığında və s. vaxtlarda gözlənilən feedbackdən çox kənara çıxmayın. Focus/hover hallarınə bir cür stil verməklə və ya dizaynınıza uyğun şəkildə dəyişməklə bütün bruzerlərdə eyni olan dizayn əladə edə bilərsiniz - yenə də qeyd edirik ki, əksər insanlar bu cür kiçik görünən parameterlərdən asılı vəziyyətdədirlər.
+
+### Cədvəllər
+
+Cədvəllər vasitəsilə müxtəlif məlumatları səhifənizdə görüntüləyə bilərsiniz.
+
+[table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) faylına baxaraq cədvəl HTML və CSS kodlarının yaxşı nümunəsilə tanış ola bilərsiniz (həmçinin [canlı nümunəyə baxın](https://mdn.github.io/learning-area/accessibility/css/table-css.html)).
+
+Cədvləllərin stilini çox vaxt öz dizayınıza uğunlaşdırmaq və ya cədvli daha az çirkin göstərmək üçün dəyişəcəksiniz. Bu stilləri verərkən, cədvəlin başlığını digər sətirlərdən fərqləndirmək və digər sətirləri zebra tərzi zolaqlamaq tövsiyyə olunur.
+
+### Rəng və rəng kontrastı
+
+Saytınız üçün rəng sxemi seçərkən mətnin rənginin və arxa fon rəngnini bir-birilə ziddiyət təşkil etdiyindən əmin olun (başqa sözlə desək rəng kontrastına fikir verin). Dizaynınız qəşəng görünə bilər lakin rəng korluğu kimi görmə problemi olan insanlar üçün saytınızın məzmununu oxumaq çətin olacaq.
+
+Saytınızdakı rəng kontrastını yoxlamaq çox asandır - bunun üçün internetdə çoxlu sayda alətlər tapa bilərsiniz. Bu alətlərə nümunə olaraq, WebAIM tərəfindən hazırlanmış [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)ə baxa bilərsiniz. Bu istifasi asan olan bir alətdir və sizə WCAG kriteriyalarına uyğunlaşmaq üçün nələr etməli olduğunuzu da izah edəcək.
+
+> **Qeyd:** Yaxşı seçilmiş rəng kontrastı gün işiğında parlaq ekranlı planşet və ya telefon işlədən istifadəçiləriniz üçün çox yararlı olacaq.
+
+Daha bir tövsiyyəmiz odur ki, işarələri və xüsusi məlumatları vurğulamaq üçün rənglərə çox da güvənməyin. Rəng korluğu olan insanlar üçün bunun heç bir əhəmiyyəti olmayacaq. Misalçün, form xanasının mütləq doldurulmalı olduğunu işarə etmək üçün tək qırmızı rəngdən deyil, qırmışı rənglənmiş ulduz işarəsindən istifadə edə bilərsiniz.
+
+### Elementləri gizlətmək
+
+Bəzən ela hallar yaranır ki, dizayna görə bəzi kontentləri gizlədib digərlərini göstərməli oluruq. Misalçün, [bizim tab nümunəsi](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([mənbə kodu](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)na baxın) bu hallardan biridir. Sözügedən nümunədə bizim 3 panelimiz var və piz [CSS positioning](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)dən istifadə edərək panelləri bir-birinin üzərində yerləşdirmişik. Fikir verin ki, tablar həm də klavişlə rahat idarə oluna bilir.
+
+![tabs example](https://media.prod.mdn.mozit.cloud/attachments/2016/05/23/13368/1481309f8899f071fba559e9c807e49e/tabbed-info-box.png)
+
+Ekran oxuycusu işlədən istifadəçiləri bütün bunlar maraqlandırmır - koddakı ardıcıllıq düzgün olduğu və bütün məzmunu oxuya bildikləri halda onlar xoşbəxtdirlər. "Abosolute positioning" vizual olaraq elementləri gizlətmək və göstərmək üçün ən yaxşı üsullardan biri hesab olunur çünki bu halda ekran oxuyucuları bütün məzmunu görə bilirlər.
+
+Digər tərəfdən, `visibility: hidden` və `display: none` kimi CSS deklarasiyalarından istifadə etmək tövsiyyə olunmur - onlar kontenti ekran oxuycularından gizlədirlər. Əgər hansısa kontenti ekran oxuyucularının görməsini istəmirsinizsə, bu başqa məsələ.
+
+> **Qeyd:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) məqaləsinda bu barədə ətraflı müzəkirələr aparılır.
+
+### İstifadəçilərin sizi stilləri dəyişəcəyini qəbul edin
+
+İstifadəçilərin sizin saytınızdakı stilləri dəyişdirəcəyi halını da nəzərdə tutun. İstifadəçilər bunu müxtəlif səbəblərdən edə bilərlər. Gözü yaxşı görməyən istifadəçi bütün saytdakı font ölçüsünü böyüdə, rəng koruluğu olan isitfadəçi isə saytdakı rəngləri dəyişərək kontrastı özləri istəyən kimi düz-qoş edə bilər. Səbəbi nə olur olsun, bu cür dəyişiklərə hazır olmalı və saytınızın dizaynını elə qurmalısınız ki, bu cür dəyişikliklər rahat edilə bilsin. Misalçün, saytınızın əsas hissəsinin böyük ölçülü text ilə rahat yola getməsini təmin edin - font ölçüsü böydüyündə saytınız mətni gizlədə və ya tamamilə pis vəziyyətə sala bilər.
