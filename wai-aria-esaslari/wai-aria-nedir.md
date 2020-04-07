@@ -67,3 +67,5 @@ WAI-ARIA-nın yaranmasına səbəb olan problemləri daha öncə qeyd etdik. İn
 4. **Semantik olmayan kontrolların müyəssərliyi** - Mürəkkəb UI komponentləri onlarla iç-içə yazılmış `div`-lərdən ibarət olduqda və tamamilə JavaScript ilə idarə olunduqda müyəssərlik zərər görə bilər - ekran oxuycuları bu cür markapın nə işə yaradığını anlamaqda çətinlik çəkə bilər və klaviatura istifadəçilər bu komponentləri istifadə edə bilməz. Bu hallarda, ARIA assistiv texnologiyalara `button`, `listbox`, `tabgroup` kimi rollarla və `aria-required`, `aria-posinset` kimi atributlarla funksionallığa dair ipucları verə bilər.
 
 Yadda saxlamalı olduğunuz bir şey odur ki, **WAI-ARIA-nı ancaq və ancaq lazım olduğunda istifadə etməlisiniz!**. Normal olaraq həmişə native HTML elementlərindən istifadə etməli, yalnız məcbur qaldığınız hallarda mürəkkəb komponentlər hazırladığınızda və s. hallarda ARIA atributlarından istifadə etməlisiniz.
+
+Daha sonra: [WAI-ARIA praktiki nümunələr](wai-aria-esaslari/wai-aria-numuneler.md)
