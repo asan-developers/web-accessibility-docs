@@ -195,7 +195,7 @@ WAI-ARIA həmçinin klassik `<label>` elementindən əlavə etiketləmənin dig�
 
 Bundan başqa elementlərin statuslarını (hallarını) göstərmək üçün də çoxlu sayda ARIA atributları mövcuddur. Milsaçün, `aria-disabled="true"` atributunu form elementinin bloklandığını göstərmək üçün istifadə edə bilərsiniz. Əksər brauzerlər `disabled` attributunun üzədindən keçir və ekran oxuyucularına belə bir form elementinin olmasından xəbər vermirlər. Bu səbəbdən ARIA attributları ilə form elementinin orada olduğunu lakin bloklandığını ekran oxuyucularına bildirmək daha yaxşı fikirdir.
 
-Əgər bloklanmış form elementinin halı dəyişəcəksə, bunun nə vaxt baş verdiyini qeyd etmək və nəticənin nə olduğunu bildirmək yaxşı fikirdir. Misalçün, [form-validation-checkbox-disabled.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) nümunəsinə baxın, burada bir checkbox mövcuddur. Həmin checkbox check olunduğunda daha bloklanmış form elementi yenidən aktiv olur və istifadəçidən daha çox məlumat qeyd etməsi tələb olunur. Həmçinin bu halın dəyişdiyini ekran oxuyucularına göstərmək üçün `absolute` positioning vasitəsilə vizual olaraq gizlədilmiş live region əlavə edilmişdir:
+Əgər bloklanmış form elementinin halı dəyişəcəksə, bunun nə vaxt baş verdiyini qeyd etmək və nəticənin nə olduğunu bildirmək yaxşı fikirdir. Misalçün, [form-validation-checkbox-disabled.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) nümunəsinə baxın, burada bir checkbox mövcuddur. Həmin checkbox check olunduğunda bloklanmış form elementi yenidən aktiv olur və istifadəçidən daha çox məlumat qeyd etməsi tələb olunur. Həmçinin bu halın dəyişdiyini ekran oxuyucularına göstərmək üçün `absolute` positioning vasitəsilə vizual olaraq gizlədilmiş live region əlavə edilmişdir:
 
 ```html
 <p class="hidden-alert" aria-live="assertive"></p>
@@ -221,3 +221,80 @@ function toggleMusician(bool) {
   }
 }
 ```
+
+## Semantik olmayan buttonları button etmək
+
+Bu məqalələrdə native HTML elementlərinin müyəssərliyi ilə bağlı olduqca çox danışmışıq. Qısası, dedik ki, klaviatura müyəssərliyini geri əldə etmək üçün `tabindex` atributundan və bir azcıq da JavaScriptdən istifadə edin.
+
+Bəs ekran oxuyucu qurğular necə? Onlar bu elementləri button kimi görməyəcəklər. Daha əvvəlki [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) nümunəsini ekran oxuyucusu ilə test etsəniz həmin düymələr "Click me! group" kimi anlaşılmaz sözlərlə təsvir ediləcəkdirlər.
+
+Bunun qarşısını almaq üçün WAI-ARIA-nın `role` atributundan istifadə edəcəyik və hər bir `div` elementinə `role="button"` atributunu əlavə edəcəyik:
+
+```html
+<div data-message="This is from the first button" tabindex="0" role="button">
+  Click me!
+</div>
+```
+
+Bu nümunəni ekran oxuyucusu ilə yoxlasaq, qurğu bu elementi "Click me!, button" kimi tələffüz edəcək.
+
+## İstifadəçiləri mürəkkəb widgetlər barədə məlumatlandırmaq
+
+Standart HTML-də mövcud olmayan lakin hər yerdə işlədilərn mürəkkəb UI elementlərini təsvir etmək üçün `role` atributunun çoxlu sayda dəyərləri vardır. Bu dəyərlərə `combobox`, `slider`, `tabpanel` və `tree` kimi elementlər daxildir. Bu elementlərin bir sıra nümunələri ilə tanlış olmaq üçün [Deque university code library](https://dequeuniversity.com/library/)yə baxmağınız tövsiyyə olunur.
+
+Daha öncə baxdığımız [Tabbed info box nümunəsi](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)nə baxaq. Bu nümunə keyboard accessibility tərəfdən baxdıqda yaxşı nümunədir - siz rahatlıqla Tab düyməsini istifadə edərək panellər arasında hərəkət edə və onları aktiv (Enter/Return düyməsilə) edə bilərsiniz. Bu nümunə həm də görmə əngəlli insanlar üçün müyəssərdir - siz rahatlıqla ekran oxuyucu qurğular vasitəsilə nümunəyə baxa və başa düşə bilərsiniz. Lakin bu nümunə kifayət qədər aydın deyil - ekran oxuyucu qurğu burada bir neçə link olduğunu, 3 başlıq və paraqraf olduğunu bildirəcəkdir. Bu komponentin nə olduğu isə istifadəçiyə aydın olmayacaqdır. İstifadəçilərə strukturun nə olduğu ilə bağlı ipucları vermək həmişə faydalıdır.
+
+Nümunəni inkişaf etdirmək üçün kodu aşağıdakı kimi dəyişə bilərik ([tamamalanmış nümunə](https://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)yə baxın):
+
+```html
+<ul role="tablist">
+  <li
+    class="active"
+    role="tab"
+    aria-selected="true"
+    aria-setsize="3"
+    aria-posinset="1"
+    tabindex="0"
+  >
+    Tab 1
+  </li>
+  <li
+    role="tab"
+    aria-selected="false"
+    aria-setsize="3"
+    aria-posinset="2"
+    tabindex="0"
+  >
+    Tab 2
+  </li>
+  <li
+    role="tab"
+    aria-selected="false"
+    aria-setsize="3"
+    aria-posinset="3"
+    tabindex="0"
+  >
+    Tab 3
+  </li>
+</ul>
+<div class="panels">
+  <article class="active-panel" role="tabpanel" aria-hidden="false">
+    ...
+  </article>
+  <article role="tabpanel" aria-hidden="true">
+    ...
+  </article>
+  <article role="tabpanel" aria-hidden="true">
+    ...
+  </article>
+</div>
+```
+
+Əlavə olunmuş yeni xüsusiyyətlə aşağıdakılardır:
+
+- Tab interfeysinin müxtəlif hissələrini işarə etmək üçün `tablist`, `tab`, `tabpanel` kimi yeni rollar əlavə olunmuşdur.
+- `aria-selected` - cari olaraq hansı tabın seçildiyini göstərir. Tablar istifadəçi tərəfindən seçilir və atributların dəyəri JavaScript ilə dəyişdirilir.
+- `aria-hidden` - elementi ekran oxuyucu qurğudan gizlədir. Bu atribut da o cümlədən istifadəçi tabları dəyişdikcə JavaScript ilə yenilənir.
+- `tabindex="0"` - `a` elementlərini sildiyimiz üçün, `li` elementlərinin klaviatura ilə fokus almağını təmin etmək üçün bu atributdan istifadə etmişik.
+- `aria-setsize` - cari elementin elementlər çoxluğunun bir hissəsi olduğunu göstərir və çoxluqda neçə element olduğunu bildirir.
+- `aria-posinset` - atributu elementin çoxluğun neçənci elementi olduğunu bildirir. `aria-setsize` atributu ilə birlikdə ekran oxuyucu qurğulara kifayət qədər məlumat verilik ki, isitfadəçinin hal hazırda harada olduğu aydın olsun.
