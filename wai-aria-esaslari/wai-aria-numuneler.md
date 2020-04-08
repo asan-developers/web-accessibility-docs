@@ -190,3 +190,34 @@ Biz əlavə olaraq digər ARIA atributlarından istifadə edərək formun müyə
 ```
 
 Tamamlanmış nümunəyə baxmaq üçün [form-validation-updated.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html) faylına baxın.
+
+WAI-ARIA həmçinin klassik `<label>` elementindən əlavə etiketləmənin digər üsullarını da təklif edir. Bunlardan bəzilərinə daha əvvəl nəzər yetirmişdik. Etiketləmə texnikaları kimi siz `aria-label` (form `<label>`-inin əvəzinə), `aria-labelledby` və `aria-describedby` kimi atributlardan istifadə edə bilərsiniz. Bu üsullar sizə klassik etiketləmədən daha çox imkanlar yaradacaqdır. Daha ətraflı məlumat üçün WebAIM-in [Advanced Form Labelling məqaləsi](https://webaim.org/techniques/forms/advanced)nə baxın.
+
+Bundan başqa elementlərin statuslarını (hallarını) göstərmək üçün də çoxlu sayda ARIA atributları mövcuddur. Milsaçün, `aria-disabled="true"` atributunu form elementinin bloklandığını göstərmək üçün istifadə edə bilərsiniz. Əksər brauzerlər `disabled` attributunun üzədindən keçir və ekran oxuyucularına belə bir form elementinin olmasından xəbər vermirlər. Bu səbəbdən ARIA attributları ilə form elementinin orada olduğunu lakin bloklandığını ekran oxuyucularına bildirmək daha yaxşı fikirdir.
+
+Əgər bloklanmış form elementinin halı dəyişəcəksə, bunun nə vaxt baş verdiyini qeyd etmək və nəticənin nə olduğunu bildirmək yaxşı fikirdir. Misalçün, [form-validation-checkbox-disabled.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) nümunəsinə baxın, burada bir checkbox mövcuddur. Həmin checkbox check olunduğunda daha bloklanmış form elementi yenidən aktiv olur və istifadəçidən daha çox məlumat qeyd etməsi tələb olunur. Həmçinin bu halın dəyişdiyini ekran oxuyucularına göstərmək üçün `absolute` positioning vasitəsilə vizual olaraq gizlədilmiş live region əlavə edilmişdir:
+
+```html
+<p class="hidden-alert" aria-live="assertive"></p>
+```
+
+Checkbox check/uncheck olunduqda ekran oxuyucularını məlumatlandırmaq üçün həmin live regionun içərisində bu barədə məlumat qeyd edilir və form elementinin `aria-disabled` atributunun dəyəri dəyişdirilir:
+
+```javascript
+function toggleMusician(bool) {
+  let instruItem = formItems[formItems.length - 1];
+  if (bool) {
+    instruItem.input.disabled = false;
+    instruItem.label.style.color = '#000';
+    instruItem.input.setAttribute('aria-disabled', 'false');
+    hiddenAlert.textContent =
+      'Instruments played field now enabled; use it to tell us what you play.';
+  } else {
+    instruItem.input.disabled = true;
+    instruItem.label.style.color = '#999';
+    instruItem.input.setAttribute('aria-disabled', 'true');
+    instruItem.input.removeAttribute('aria-label');
+    hiddenAlert.textContent = 'Instruments played field now disabled.';
+  }
+}
+```
