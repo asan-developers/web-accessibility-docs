@@ -17,7 +17,7 @@ Daha sonra isə əlilliyi olan bəzi insan qrupları ilə işləyib, digər çat
 - İstifadə etiyiniz UI Buttonlar klaviatura istifadəçilə üçün əlçatandırmı?
 
 Kontenti daha çox müyəssər etmək üçün bacardığınız qədər araşdırın, potensial problemləri ortaya çıxarın və həllər/alternativlər barəsində düşünün. Mətnlə işiniz rahatdı, bəs əgər saytınızda qəşəng görünən 3D qrafika varsa?
-Bu cür məzmunu hamı üçün əlçatan etmək üçün hansı yolların olduğuna baxmalı və tətbiq etməlisiniz. Misalçün, bütün multimediya kontentinizin transkriptinin olması, bir az uzun iş olsa da məsələnin bir həllidir.
+Bu cür məzmunu hamı üçün əlçatan etmək üçün hansı yolların olduğuna baxmalı və tətbiq etməlisiniz. Misalçün, bütün multimedia kontentinizin transkriptinin olması, bir az uzun iş olsa da məsələnin bir həllidir.
 
 Realist olmağa çalışın - 100% müyəssərlik ideal bir nəticədir lakin real deyil - siz həmişə hansısa kənar hallarla rastlaşacaqsınız ki, hər hansı bir istifadəçi üçün sizin saytı istifadə etmək çətinlik yaradacaq.
 Lakin buna baxmayaraq əlinizdən gələni də etməlisiniz. Əgər saytınıza WebGL ilə qurulmuş 3D pie chart daxil etmək istəyirsinizsə, siz həmçinin bunun alternativi olaraq həmin məlumatı hansısa bir cədvələ də daxil etməlisiniz.

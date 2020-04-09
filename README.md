@@ -58,12 +58,12 @@ Bütün məqalələr, [Mozilla Developers Network](https://developer.mozilla.org
   - [WAI-ARIA Nədir?](wai-aria-esaslari/wai-aria-nedir.md)
   - [WAI-ARIA praktiki nümunələr](wai-aria-esaslari/wai-aria-numuneler.md)
 
-- Müyəssər Multimediya
+- Müyəssər Multimedia
 
-  - [Multimediya və Müyəssərlik](muyesser-multimediya/multimediya-ve-muyesserlik.md)
-  - [Müyəssər Audio və Video](muyesser-multimediya/muyesser-audio-ve-video.md)
-  - [Audio Transkriptləri](muyesser-multimediya/audio-transkriptleri.md)
-  - [Video Mətn İzləri](muyesser-multimediya/video-metn-izleri.md)
+  - [Multimedia və Müyəssərlik](muyesser-multimedia/multimedia-ve-muyesserlik.md)
+  - [Müyəssər Audio və Video](muyesser-multimedia/muyesser-audio-ve-video.md)
+  - [Audio Transkriptləri](muyesser-multimedia/audio-transkriptleri.md)
+  - [Video Mətn İzləri](muyesser-multimedia/video-metn-izleri.md)
 
 - Mobil Müyəssərlik
 
