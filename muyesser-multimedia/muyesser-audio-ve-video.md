@@ -186,3 +186,5 @@ Göstərdiyimiz sadəcə öz video playerinizi hazırlamağın çox sadə bir n�
 - [Creating a cross-browser video player](https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
 
 Həmçinin göstərdiyimiz sadə nümunənin [canlı versiyası](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) ilə də tanış ola bilərsiniz.
+
+Daha sonra: [Audio Transkriptlər](muyesser-multimedia/audio-transkriptler.md)
