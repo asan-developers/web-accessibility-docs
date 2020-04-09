@@ -18,3 +18,5 @@ Audio resursu saytınızda yayımlamaq və transkriptin sonra paylaşılacağın
 Əgər avtomatlaşdırılmış xidmət işlədirsinizsə böyük ehtimalla bu xidmətin sizə təqdim etdiyi user interfeysi istifadə etməli olacaqsınız. Misalçün, [ Wait, ARIA Roles Have Categories?](https://www.youtube.com/watch?v=mwF-PpJOjMs) videosuna baxın, videonun aşağısında (like, dislike buttonları olan hissədə) üç nöqtə (...) ilə işarələnən menyunu açın və orada _Open transcript_ düyməsinə klikləyin. Sağ tərəfdə transkriptlərin ayrıca bir paneldə açıldığını görəcəksiniz.
 
 Əgər transkripti göstərmək üçün öz interfeysinizi hazırlamaq istəyirsinizsə bunu ürəyiniz necə istəsə elə edə bilərsiniz. Tövsiyə olunan odur ki, açılıb bağlana bilən bir paneldə bunu edəsiniz. Nümunə üçün [audio-transcrip-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) səhifəsinə baxın ([mənbə kodu](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui)na baxın).
+
+Daha sonra: [Video Mətn İzləri](muyesser-multimedia/video-metn-izleri.md)
