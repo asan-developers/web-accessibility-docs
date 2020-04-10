@@ -29,7 +29,7 @@
   - [Multimedia və Müyəssərlik](muyesser-multimedia/multimedia-ve-muyesserlik.md)
   - [Müyəssər Audio və Video](muyesser-multimedia/muyesser-audio-ve-video.md)
   - [Audio Transkriptlər](muyesser-multimedia/audio-transkriptler.md)
-  - [Video Mətn İzləri](muyesser-multimedia/video-metn-izleri.md)
+  - [Video Mətn Parçaları](muyesser-multimedia/video-metn-parcalari.md)
 
 - Mobil Müyəssərlik
 
