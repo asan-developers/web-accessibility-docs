@@ -34,7 +34,7 @@
 - Mobil Müyəssərlik
 
   - [Mobil Qurğularda Müyəssərlik](mobil-muyesserlik/mobil-qurgularda-muyesserlik.md)
-  - [Android və iOS-da screen oxuyucuları](mobil-muyesserlik/screen-oxuyuculari-android-ios.md)
+  <!-- - [Android və iOS-da screen oxuyucuları](mobil-muyesserlik/screen-oxuyuculari-android-ios.md) -->
   - [İdarə Mexanizmləri](mobil-muyesserlik/idare-mexanizmleri.md)
   - [Responsiv Dizayn](mobil-muyesserlik/responsiv-dizayn.md)
   - [User inputlar](mobil-muyesserlik/user-inputlar.md)
