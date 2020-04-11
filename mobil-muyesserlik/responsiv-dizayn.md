@@ -28,3 +28,5 @@ Mobil qurğuların ekranı dar olduğu üçün saytdakı menyunu media querylər
 
 Bu menyuları saytınızda tətbiq edərkən ikonun müxtəlif idarə mexanizmləri tərəfindən rahat idarə edilə biləcəyindən əmin olun.
 Yaxşı hamburger menyu nümunəsinə baxmaq üçün [good hamburger menu example](http://fritz-weisshart.de/meg_men/) saytına baxın.
+
+Daha sonra: [User inputlar](mobil-muyesserlik/user-inputlar.md)
